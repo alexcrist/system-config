@@ -4,12 +4,8 @@
 " set vi compatibility off
 set nocompatible
 
-" disable filetype until plugins are loaded
-filetype off
-
-" enable filetype plugins
-filetype plugin on
-filetype indent on
+" set filetype
+filetype plugin indent on
 
 " set 7 lines to cursor when scrolling
 set so=7
@@ -78,45 +74,3 @@ set si
 " line numbers
 set number
 
-" Mappings
-" ----------------------------------------------------------------------
-
-" make it easier to enter commands
-map <Space> :
-
-" tab switches windows
-map <Tab> <C-w><C-w>
-
-" Plugins
-" ----------------------------------------------------------------------
-
-" begin plugins
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" plugins
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'hdima/python-syntax'
-
-" close nerd tree if it's the only window
-autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
-function! s:CloseIfOnlyNerdTreeLeft()
-    if exists("t:NERDTreeBufName")
-        if bufwinnr(t:NERDTreeBufName) != -1
-            if winnr("$") == 1
-                q
-            endif
-        endif
-    endif
-endfunction
-
-" start nerdtree on start
-autocmd VimEnter * NERDTree
-
-" move curosr out of nerdtree window on start
-autocmd VimEnter * wincmd p
-
-" end plugins
-call vundle#end()
-filetype plugin indent on
