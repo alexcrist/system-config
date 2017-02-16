@@ -1,5 +1,15 @@
-" General Settings
+" Vim Settings
 " ----------------------------------------------------------------------
+
+" pathogen plugin manager
+execute pathogen#infect()
+
+" open NERDTree when vim opens
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+
+" close NERDTree if it's the last thing open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " set vi compatibility off
 set nocompatible
@@ -15,7 +25,7 @@ set hid
 
 " backspace can delete more chars than default
 set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
+set whichwrap+=<,>,h,l,[,]
 
 " ignore case when searching
 set ignorecase
@@ -40,7 +50,7 @@ syntax enable
 
 " desert color scheme
 try
-    colorscheme desert
+    colorscheme Tomorrow-Night
 catch
 endtry
 
@@ -62,8 +72,8 @@ set expandtab
 set smarttab
 
 " 1 tab = 4 spaces
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 " auto indent
 set ai
@@ -73,4 +83,8 @@ set si
 
 " line numbers
 set number
+
+" burn the witch!
+set mouse=a
+
 
