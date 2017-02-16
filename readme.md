@@ -1,5 +1,5 @@
 # system-config
-This is a repository containing my default setting files and more for getting started with clean OS installs.
+A repository containing my dot files and more for getting started with clean installs.
 
 ## Staple programs
 * [Chrome](https://support.google.com/chrome/answer/95346?co=GENIE.Platform%3DDesktop&hl=en)
