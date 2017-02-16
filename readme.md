@@ -15,7 +15,8 @@ This is a repository containing my default setting files and more for getting st
 * Git
 
 ## Git Aliases
-* ```git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"```
+
+    git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 ## [Sublime](https://www.sublimetext.com/3) - [Package control](https://packagecontrol.io/installation)
 * Color sublime
