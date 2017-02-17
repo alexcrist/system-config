@@ -11,19 +11,19 @@ A repository containing my dot files and more for getting started with clean ins
 * Office (thru myNeu)
 * Photoshop
 
+## [iTerm2](https://www.iterm2.com/)
+* [Powerline fonts](https://github.com/powerline/fonts) (for Airline plugin)
+* Settings
+ * `Meslo L for Powerline` in 14pt
+
 ## [Homebrew](https://brew.sh/)
-* Git
+* Git - `brew install git`
 
 ## Git Aliases
 
     git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-## [Sublime](https://www.sublimetext.com/3) - [Package control](https://packagecontrol.io/installation)
-* Color sublime
-* Sidebar enhancements
-
-## Vim - [Pathogen](https://github.com/tpope/vim-pathogen)
-* [nerdtree](https://github.com/scrooloose/nerdtree)
-* [syntastic](https://github.com/vim-syntastic/syntastic)
-* [vim-airline](https://github.com/vim-airline/vim-airline)
-* [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+## Vim
+* [Vundle](https://github.com/VundleVim/Vundle.vim)
+* [Tomorrow Night Theme](https://github.com/chriskempson/vim-tomorrow-theme/blob/master/colors/Tomorrow-Night.vim)
+* `:PluginInstall` to install plugins with Vundle
