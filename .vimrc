@@ -1,8 +1,8 @@
-" ======================================================================
-" Vim Settings =========================================================
-" ======================================================================
+" =============================================================================
+" Vim Settings ================================================================
+" =============================================================================
 
-" Plugins --------------------------------------------------------------
+" Plugins ---------------------------------------------------------------------
 
 set nocompatible
 filetype off
@@ -22,7 +22,7 @@ call vundle#end()
 filetype plugin indent on
 syntax enable
 
-" Plugin Settings ------------------------------------------------------
+" Plugin Settings -------------------------------------------------------------
 
 " NERDTREE - open when vim opesn
 "          - switch to opened window
@@ -49,9 +49,9 @@ let g:javascript_plugin_ngdoc=1
 
 " Ctrlp - set search dir
 let g:ctrlp_working_path_mode='ra'
-let g:ctrlp_user_command='find %s -type f'
+let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git'
 
-" General Settings -----------------------------------------------------
+" General Settings ------------------------------------------------------------
 
 colorscheme Tomorrow-Night            " colorscheme
 autocmd BufWritePre *.js :%s/\s\+$//e " trim trailing whitespace from js files on save
@@ -77,11 +77,32 @@ set si                                " smart indent
 set number                            " line numbers
 set mouse=a                           " burn the witch! enables mouse
 set nowrap                            " don't wrap lines
+set colorcolumn=80,100,120            " rulers
+highlight ColorColumn guibg=236
 
-" Mappings -------------------------------------------------------------
+" Mappings --------------------------------------------------------------------
 
 " autocomplete html tags
 imap </ </<C-X><C-O>
+
+" tab to switch windows
 map <Tab> <C-W><C-W>
 
+" enable numpad
+inoremap <Esc>Oq 1
+inoremap <Esc>Or 2
+inoremap <Esc>Os 3
+inoremap <Esc>Ot 4
+inoremap <Esc>Ou 5
+inoremap <Esc>Ov 6
+inoremap <Esc>Ow 7
+inoremap <Esc>Ox 8
+inoremap <Esc>Oy 9
+inoremap <Esc>Op 0
+inoremap <Esc>On .
+inoremap <Esc>OQ /
+inoremap <Esc>OR *
+inoremap <Esc>Ol +
+inoremap <Esc>OS -
+inoremap <Esc>OM <Enter>
 
