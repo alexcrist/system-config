@@ -12,7 +12,7 @@ A repository containing my dot files and more for getting started with clean ins
 * Photoshop
 
 ## [iTerm2](https://www.iterm2.com/)
-* [Powerline fonts](https://github.com/powerline/fonts) (for Airline plugin)
+* [Powerline fonts](https://github.com/powerline/fonts) 
 * Settings
  * `Meslo L for Powerline` in 14pt
 
