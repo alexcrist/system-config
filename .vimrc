@@ -17,6 +17,8 @@ Plugin 'airblade/vim-gitgutter'          " git gutter
 Plugin 'nathanaelkane/vim-indent-guides' " indentation guides
 Plugin 'jelera/vim-javascript-syntax'    " extra js support
 Plugin 'ctrlpvim/ctrlp.vim'              " fuzzy file search
+Plugin 'Raimondi/delimitMate'            " bracket auto closer
+Plugin 'scrooloose/syntastic'            " syntax checker
 
 call vundle#end()
 filetype plugin indent on
@@ -35,8 +37,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "               - set custom colors
 let g:indent_guides_auto_colors=0
 autocmd VimEnter * IndentGuidesEnable
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=234
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 
 " Airline - enable powerline fonts
 "         - set theme
@@ -46,6 +48,9 @@ let g:airline_theme='tomorrow'
 " Ctrlp - set search dir
 let g:ctrlp_working_path_mode='ra'
 let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git'
+
+" Syntastic - check on open
+let g:syntastic_check_on_open=1
 
 " General Settings ------------------------------------------------------------
 
