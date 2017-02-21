@@ -33,8 +33,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " Indent guides - enable
 "               - set custom colors
-autocmd VimEnter * IndentGuidesEnable
 let g:indent_guides_auto_colors=0
+autocmd VimEnter * IndentGuidesEnable
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
 
@@ -43,18 +43,12 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
 let g:airline_powerline_fonts=1
 let g:airline_theme='tomorrow'
 
-" Javascript - enable syntax highlighting
-let g:javascript_plugin_jsdoc=1
-let g:javascript_plugin_ngdoc=1
-
 " Ctrlp - set search dir
 let g:ctrlp_working_path_mode='ra'
 let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git'
 
 " General Settings ------------------------------------------------------------
 
-colorscheme Tomorrow-Night            " colorscheme
-autocmd BufWritePre *.js :%s/\s\+$//e " trim trailing whitespace from js files on save
 set so=7                              " padding for cursor when scrolling
 set hid                               " hide buffer when abandoned
 set backspace=eol,start,indent        " backspace can delete more chars
@@ -78,6 +72,16 @@ set number                            " line numbers
 set mouse=a                           " burn the witch! enables mouse
 set nowrap                            " don't wrap lines
 set colorcolumn=80,100,120            " rulers
+
+" Special Settings ------------------------------------------------------------
+
+" color scheme
+colorscheme Tomorrow-Night
+
+" trim trailing whitespace on save
+autocmd BufWritePre *.js :%s/\s\+$//e
+
+" set ruler color
 highlight ColorColumn guibg=236
 
 " Mappings --------------------------------------------------------------------
