@@ -13,8 +13,8 @@ A repository containing my dot files and more for getting started with clean ins
 
 ## [iTerm2](https://www.iterm2.com/)
 * [Powerline fonts](https://github.com/powerline/fonts) 
-* Settings
- * `Meslo L for Powerline` in 14pt
+* Settings > Profiles > Text > Font
+ * 14pt Meslo LG M Regular for Powerline
 
 ## [Homebrew](https://brew.sh/)
 * Git - `brew install git`
