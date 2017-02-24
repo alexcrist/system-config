@@ -27,7 +27,7 @@ Plugin 'scrooloose/nerdcommenter'               " easy commenting
 Plugin 'terryma/vim-multiple-cursors'           " multiple cursors
 Plugin 'valloric/youcompleteme'                 " auto completion
 Plugin 'bronson/vim-trailing-whitespace'        " whitespace highlighting
-Plugin 'Xuyuanp/nerdtree-git-plugin'        " git status in nerdtree
+Plugin 'Xuyuanp/nerdtree-git-plugin'            " git status in nerdtree
 
 call vundle#end()
 filetype plugin indent on
@@ -80,8 +80,11 @@ let g:rainbow_active=1
 let g:NERDSpaceDelims=1
 let g:NERDCommentEmptyLines=1
 
-" vim-multiple-cursors = 
+" vim-multiple-cursors
 let g:multi_cursor_exit_from_visual_mode=0
+
+" nerdtree-git-plugin - simple symbol
+let g:NERDTreeUseSimpleIndicator=1
 
 " General Settings ------------------------------------------------------------
 
@@ -123,11 +126,16 @@ autocmd BufWritePre *.js :%s/\s\+$//e
 " Mappings --------------------------------------------------------------------
 
 " ctrl slash = comment
-nmap <C-_> <leader>c<Space>
-vmap <C-_> <leader>c<Space>
+nnoremap <C-_> <leader>c<Space>
+vnoremap <C-_> <leader>c<Space>
 
 " tab to switch windows
-map <Tab> <C-W><C-W>
+nnoremap <Tab> <C-W><C-W>
+nnoremap <S-Tab> <C-W>W
+
+" tab to indent lines
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 
 " enable numpad
 inoremap <Esc>Oq 1
