@@ -111,7 +111,7 @@ set number                            " line numbers
 set mouse=a                           " burn the witch! enables mouse
 set nowrap                            " don't wrap lines
 set colorcolumn=80,100,120            " rulers
-set timeoutlen=0                      " no delay on escape
+set timeoutlen=30                     " short delay on escape
 set splitbelow                        " open splits below
 set splitright                        " open splits to right
 
@@ -126,16 +126,30 @@ autocmd BufWritePre *.js :%s/\s\+$//e
 " Mappings --------------------------------------------------------------------
 
 " ctrl slash = comment
-nnoremap <C-_> <leader>c<Space>
-vnoremap <C-_> <leader>c<Space>
+nmap <C-_> <leader>c<Space>
+vmap <C-_> <leader>c<Space>gv
 
 " tab to switch windows
-nnoremap <Tab> <C-W><C-W>
-nnoremap <S-Tab> <C-W>W
+nmap <Tab> <C-W><C-W>
+nmap <S-Tab> <C-W>W
 
 " tab to indent lines
-vnoremap <Tab> >gv
-vnoremap <S-Tab> <gv
+vmap <Tab> >gv
+vmap <S-Tab> <gv
+
+" shift arrow key to highlight stuff
+vmap <S-Up> <Up>
+vmap <S-Right> <Right>
+vmap <S-Down> <Down>
+vmap <S-Left> <Left>
+nmap <S-Up> v<Up>
+nmap <S-Right> v<Right>
+nmap <S-Down> v<Down>
+nmap <S-Left> v<Left>
+imap <S-Up> <Esc>v<Up>
+imap <S-Right> <Esc><Right>v<Right>
+imap <S-Down> <Esc>v<Down>
+imap <S-Left> <Esc>v<Left>
 
 " enable numpad
 inoremap <Esc>Oq 1
