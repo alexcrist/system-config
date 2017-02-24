@@ -9,19 +9,25 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'            " package manager
-Plugin 'scrooloose/nerdtree'             " file tree
-Plugin 'vim-airline/vim-airline'         " status bar upgrade
-Plugin 'vim-airline/vim-airline-themes'  " status bar upgrade themes
-Plugin 'airblade/vim-gitgutter'          " git gutter
-Plugin 'ctrlpvim/ctrlp.vim'              " fuzzy file search
-Plugin 'Raimondi/delimitMate'            " bracket auto closer
-Plugin 'scrooloose/syntastic'            " syntax checker
-Plugin 'nathanaelkane/vim-indent-guides' " indentation guides
-Plugin 'alvan/vim-closetag'              " autocomplete html tags
-Plugin 'jelera/vim-javascript-syntax'    " js support
-Plugin 'flazz/vim-colorschemes'          " color scheme
-Plugin 'luochen1990/rainbow'             " rainbow parens!
+Plugin 'VundleVim/Vundle.vim'                   " package manager
+Plugin 'scrooloose/nerdtree'                    " file tree
+Plugin 'vim-airline/vim-airline'                " status bar upgrade
+Plugin 'vim-airline/vim-airline-themes'         " status bar upgrade themes
+Plugin 'airblade/vim-gitgutter'                 " git gutter
+Plugin 'ctrlpvim/ctrlp.vim'                     " fuzzy file search
+Plugin 'Raimondi/delimitMate'                   " bracket auto closer
+Plugin 'scrooloose/syntastic'                   " syntax checker
+Plugin 'nathanaelkane/vim-indent-guides'        " indentation guides
+Plugin 'alvan/vim-closetag'                     " autocomplete html tags
+Plugin 'jelera/vim-javascript-syntax'           " js syntax
+Plugin 'othree/javascript-libraries-syntax.vim' " js library syntax
+Plugin 'flazz/vim-colorschemes'                 " color scheme
+Plugin 'luochen1990/rainbow'                    " rainbow parens!
+Plugin 'scrooloose/nerdcommenter'               " easy commenting
+Plugin 'terryma/vim-multiple-cursors'           " multiple cursors
+Plugin 'valloric/youcompleteme'                 " auto completion
+Plugin 'bronson/vim-trailing-whitespace'        " whitespace highlighting
+Plugin 'Xuyuanp/nerdtree-git-plugin'        " git status in nerdtree
 
 call vundle#end()
 filetype plugin indent on
@@ -69,6 +75,14 @@ let g:javascript_plugin_flow=1
 " rainbow - enable
 let g:rainbow_active=1
 
+" nerdcommenter - add space after comment symbol
+"               - allow commenting of empty lines
+let g:NERDSpaceDelims=1
+let g:NERDCommentEmptyLines=1
+
+" vim-multiple-cursors = 
+let g:multi_cursor_exit_from_visual_mode=0
+
 " General Settings ------------------------------------------------------------
 
 set so=7                              " padding for cursor when scrolling
@@ -108,8 +122,9 @@ autocmd BufWritePre *.js :%s/\s\+$//e
 
 " Mappings --------------------------------------------------------------------
 
-" leader = comma
-let mapleader=","
+" ctrl slash = comment
+nmap <C-_> <leader>c<Space>
+vmap <C-_> <leader>c<Space>
 
 " tab to switch windows
 map <Tab> <C-W><C-W>

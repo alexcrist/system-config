@@ -18,6 +18,7 @@ A repository containing my dot files and more for getting started with clean ins
 
 ## [Homebrew](https://brew.sh/)
 * Git - `brew install git`
+* MacVim - `brew install macvim --with-override-system-vim`
 
 ## Git Aliases
 
@@ -27,3 +28,4 @@ A repository containing my dot files and more for getting started with clean ins
 * [Vundle](https://github.com/VundleVim/Vundle.vim)
 * [Tomorrow Night Theme](https://github.com/chriskempson/vim-tomorrow-theme/blob/master/colors/Tomorrow-Night.vim)
 * `:PluginInstall` to install plugins with Vundle
+* [Install YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
