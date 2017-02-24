@@ -38,9 +38,15 @@ syntax enable
 " nerdtree - open when vim opesn
 "          - switch to opened window
 "          - close if last remaining window
+"          - minimal UI
+"          - show hidden files
+"          - single click to open dir, double to open file
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeMinimalUI=1
+let NERDTreeShowHidden=1
+let NERDTreeMouseMode=2
 
 " vim-airline - enable powerline fonts
 "             - set theme
@@ -88,16 +94,12 @@ let g:multi_cursor_exit_from_visual_mode=0
 
 " nerdtree-git-plugin - simple symbols
 let g:NERDTreeIndicatorMapCustom = {
-\ "Modified"  : "~",
+\ "Modified"  : "*",
 \ "Staged"    : "+",
-\ "Untracked" : "*",
+\ "Untracked" : "?",
 \ "Renamed"   : "➜",
 \ "Unmerged"  : "=",
-\ "Deleted"   : "-",
-\ "Dirty"     : "x",
-\ "Clean"     : "ø",
-\ "Ignored"   : '☒',
-\ "Unknown"   : "?"
+\ "Dirty"     : "*",
 \ }
 
 " General Settings ------------------------------------------------------------
