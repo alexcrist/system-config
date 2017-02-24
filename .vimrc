@@ -86,8 +86,19 @@ let g:NERDCommentEmptyLines=1
 " vim-multiple-cursors
 let g:multi_cursor_exit_from_visual_mode=0
 
-" nerdtree-git-plugin - simple symbol
-let g:NERDTreeUseSimpleIndicator=1
+" nerdtree-git-plugin - simple symbols
+let g:NERDTreeIndicatorMapCustom = {
+\ "Modified"  : "~",
+\ "Staged"    : "+",
+\ "Untracked" : "*",
+\ "Renamed"   : "➜",
+\ "Unmerged"  : "=",
+\ "Deleted"   : "-",
+\ "Dirty"     : "x",
+\ "Clean"     : "ø",
+\ "Ignored"   : '☒',
+\ "Unknown"   : "?"
+\ }
 
 " General Settings ------------------------------------------------------------
 
