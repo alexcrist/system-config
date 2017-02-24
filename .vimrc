@@ -73,7 +73,10 @@ let g:javascript_plugin_ngdoc=1
 let g:javascript_plugin_flow=1
 
 " rainbow - enable
+"         - additonal operators
 let g:rainbow_active=1
+let g:rainbow_conf = { 'operators': '_,\|=\|+\|\*\|-\|\.\|;\||\|&\|?\|:\|<\|>\|%\|/[^/]_' }
+
 
 " nerdcommenter - add space after comment symbol
 "               - allow commenting of empty lines
