@@ -28,6 +28,7 @@ Plugin 'terryma/vim-multiple-cursors'           " multiple cursors
 Plugin 'valloric/youcompleteme'                 " auto completion
 Plugin 'bronson/vim-trailing-whitespace'        " whitespace highlighting
 Plugin 'Xuyuanp/nerdtree-git-plugin'            " git status in nerdtree
+Plugin 'ap/vim-css-color'                       " css color highlighting
 
 call vundle#end()
 filetype plugin indent on
@@ -130,6 +131,7 @@ set colorcolumn=80,100,120            " rulers
 set timeoutlen=30                     " short delay on escape
 set splitbelow                        " open splits below
 set splitright                        " open splits to right
+set cursorline                        " highlight current line
 
 " Special Settings ------------------------------------------------------------
 
@@ -137,13 +139,13 @@ set splitright                        " open splits to right
 colorscheme hybrid_reverse
 
 " trim trailing whitespace on save
-autocmd BufWritePre *.js :%s/\s\+$//e
+autocmd BufWritePre *.js,*.css,*.html :%s/\s\+$//e
 
 " Mappings --------------------------------------------------------------------
 
 " ctrl slash = comment
-nmap <C-_> <leader>c<Space>
-vmap <C-_> <leader>c<Space>gv
+nmap <C-_> <leader>cl
+vmap <C-_> <leader>clgv
 
 " tab to switch windows
 nmap <Tab> <C-W><C-W>
