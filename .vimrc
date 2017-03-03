@@ -15,7 +15,7 @@ Plugin 'vim-airline/vim-airline'                " status bar upgrade
 Plugin 'vim-airline/vim-airline-themes'         " status bar upgrade themes
 Plugin 'airblade/vim-gitgutter'                 " git gutter
 Plugin 'ctrlpvim/ctrlp.vim'                     " fuzzy file search
-Plugin 'Raimondi/delimitMate'                   " bracket auto closer
+Plugin 'jiangmiao/auto-pairs'                   " bracket auto closer
 Plugin 'scrooloose/syntastic'                   " syntax checker
 Plugin 'nathanaelkane/vim-indent-guides'        " indentation guides
 Plugin 'alvan/vim-closetag'                     " autocomplete html tags
@@ -48,6 +48,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let NERDTreeMinimalUI=1
 let NERDTreeShowHidden=1
 let NERDTreeMouseMode=2
+let NERDTreeIgnore=['.DS_Store', '.git', 'node_modules', '\.sublime-project', '\.sublime-workspace']
 
 " vim-airline - enable powerline fonts
 "             - set theme
