@@ -1,0 +1,30 @@
+{
+	"color_scheme": "Packages/User/SublimeLinter/Agila Oceanic Next (SL).tmTheme",
+	"draw_minimap_border": true,
+	"font_face": "Meslo LG M Regular for Powerline",
+	"font_options":
+	[
+		"gray_antialias",
+		"subpixel_antialias"
+	],
+	"font_size": 14,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"rulers":
+	[
+		80,
+		100,
+		120
+	],
+	"shift_tab_unindent": true,
+	"tab_size": 2,
+	"theme": "Agila.sublime-theme",
+	"theme_agila_compact_tab": true,
+	"theme_agila_sidebar_font_small": true,
+	"theme_agila_sidebar_mini": true,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}

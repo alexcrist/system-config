@@ -12,9 +12,9 @@ A repository containing my dot files and more for getting started with clean ins
 * Photoshop
 
 ## [iTerm2](https://www.iterm2.com/)
-* [Powerline fonts](https://github.com/powerline/fonts) 
+* [Powerline fonts](https://github.com/powerline/fonts)
 * Settings > Profiles > Text > Font
- * 14pt Meslo LG M Regular for Powerline
+  * 14pt Meslo LG M Regular for Powerline
 
 ## [Homebrew](https://brew.sh/)
 * Git - `brew install git`
@@ -26,6 +26,20 @@ A repository containing my dot files and more for getting started with clean ins
 
 ## Vim
 * [Vundle](https://github.com/VundleVim/Vundle.vim)
-* [Tomorrow Night Theme](https://github.com/chriskempson/vim-tomorrow-theme/blob/master/colors/Tomorrow-Night.vim)
 * `:PluginInstall` to install plugins with Vundle
 * [Install YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
+
+## [Sublime](https://www.sublimetext.com/3)
+* [Package Control](https://packagecontrol.io/installation)
+  * Agila Theme
+  * Material Theme
+  * AdvancedNewFile
+  * BracketHighlighter
+  * Console Wrap for JS
+  * GitGutter
+  * HTMLBeautify
+  * Side Bar Enhancements
+  * SyncedSideBar
+  * Pretty JSON
+  * SublimeCodeIntel
+
