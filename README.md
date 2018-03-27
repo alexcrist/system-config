@@ -57,6 +57,7 @@
 
 * **Settings**: [.zshrc](./.zshrc)
 * **Plugin Manager**: [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+* **Theme:** [spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt#oh-my-zsh)
 
 #### Git
 
