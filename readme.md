@@ -42,7 +42,6 @@
   * ESLint
   * RainbowBrackets
   * Kay Theme
-* **Color Theme:** Kay Dark
 
 #### [iTerm2](https://www.iterm2.com/)
 
