@@ -25,7 +25,6 @@ Plugin 'flazz/vim-colorschemes'                 " color scheme
 Plugin 'luochen1990/rainbow'                    " rainbow parens!
 Plugin 'scrooloose/nerdcommenter'               " easy commenting
 Plugin 'terryma/vim-multiple-cursors'           " multiple cursors
-Plugin 'valloric/youcompleteme'                 " auto completion
 Plugin 'bronson/vim-trailing-whitespace'        " whitespace highlighting
 Plugin 'Xuyuanp/nerdtree-git-plugin'            " git status in nerdtree
 Plugin 'ap/vim-css-color'                       " css color highlighting
