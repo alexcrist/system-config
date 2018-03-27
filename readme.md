@@ -20,38 +20,42 @@
 
 #### [VSCode](https://coderwall.com/p/euwpig/a-better-git-log)
 
-*Extensions:*
-* Auto Close Tag
-* ESLint
-* RainbowBrackets
-* Kay Theme
-*Color Theme:* Kay Dark
+* **Extensions:**
+  * Auto Close Tag
+  * ESLint
+  * RainbowBrackets
+  * Kay Theme
+* **Color Theme:** Kay Dark
 
 #### [iTerm2](https://www.iterm2.com/)
 
-* [Powerline fonts](https://github.com/powerline/fonts)
+* [powerline fonts](https://github.com/powerline/fonts)
   * `Settings` > `Profiles` > `Text` > `Font` > `14pt Meslo LG M Regular for Powerline`
-* [Material Design Theme](https://github.com/MartinSeeler/iterm2-material-design)
+* [material design theme](https://github.com/MartinSeeler/iterm2-material-design)
 
 #### [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
 
-* [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh)
+* [oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh)
 * [.zshrc](./.zshrc)
 
 #### Git
 
-[A better git log.](https://coderwall.com/p/euwpig/a-better-git-log)
+* [A better git log.](https://coderwall.com/p/euwpig/a-better-git-log)
 
     git config --global alias.lg \
         "log \
             --color \
             --graph \
-            --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
+            --pretty=format:'%Cred%h%Creset \
+                             -%C(yellow)%d%Creset \
+                             %s \
+                             %Cgreen(%cr) \
+                             %C(bold blue)<%an>%Creset' \
             --abbrev-commit"
 
 #### Vim
 
 * [.vimrc](./.vimrc)
-* [Vundle](https://github.com/VundleVim/Vundle.vim)
-  * `:PluginInstall` to install plugins with Vundle
+* [vundle](https://github.com/VundleVim/Vundle.vim)
+  * `:PluginInstall`
 
