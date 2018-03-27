@@ -36,7 +36,8 @@
 
 > All purpose IDE.
 
-* **Extensions:**
+* **Settings:** [settings.json](./settings.json)
+* **Plugins:**
   * Auto Close Tag
   * ESLint
   * RainbowBrackets
@@ -47,16 +48,16 @@
 
 > Terminal but better.
 
-* [powerline fonts](https://github.com/powerline/fonts)
+* **Fonts:** [powerline](https://github.com/powerline/fonts)
   * `Settings` > `Profiles` > `Text` > `Font` > `14pt Meslo LG M Regular for Powerline`
-* [material design theme](https://github.com/MartinSeeler/iterm2-material-design)
+* **Theme:** [material design](https://github.com/MartinSeeler/iterm2-material-design)
 
 #### [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
 
 > Bash but better.
 
-* [oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh)
-* [.zshrc](./.zshrc)
+* **Settings**: [.zshrc](./.zshrc)
+* **Plugin Manager**: [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 #### Git
 
@@ -79,7 +80,7 @@
 
 > In case my mouse breaks.
 
-* [.vimrc](./.vimrc)
-* [vundle](https://github.com/VundleVim/Vundle.vim)
+* **Settings**: [.vimrc](./.vimrc)
+* **PluginManager**: [vundle](https://github.com/VundleVim/Vundle.vim)
   * `:PluginInstall`
 
