@@ -1,0 +1,10 @@
+swipe:
+  3:
+    up:
+      command: 'xdotool key ctrl+alt+Down'
+    down:
+      command: 'xdotool key ctrl+alt+Down'
+    left:
+      command: 'xdotool key ctrl+alt+Right'
+    right:
+      command: 'xdotool key ctrl+alt+Left'

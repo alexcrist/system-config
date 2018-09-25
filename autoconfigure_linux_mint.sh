@@ -25,7 +25,16 @@ dconf load /org/gnome/terminal/legacy/keybindings/ < terminal-keybindings.conf
 printText "Switching [CMD] and [CTRL]..."
 cp .Xmodmap ~/.Xmodmap
 xmodmap ~/.Xmodmap
-cp Switch\ \[CMD\]\ and\ \[CTRL\].desktop ~/.config/autostart/
+cp 'Switch [CMD] and [CTRL].desktop' ~/.config/autostart/
+
+printText "Enabling multitouch gestures..."
+gpasswd -a $USER input
+apt install libinput-tools
+gem install fusuma
+apt install xdotool
+mkdir -p ~/.config/fusuma
+cp fusuma-config.yml ~/.config/fusuma/config.yml
+cp 'Multitouch gestures.desktop' ~/.config/autostart/
 
 printTitle "========== GIT =========="
 
