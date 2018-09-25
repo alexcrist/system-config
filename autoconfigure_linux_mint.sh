@@ -1,11 +1,19 @@
 #!/bin/bash
 
-echo "========== GIT =========="
+function printTitle {
+  echo -e "\n\033[0;34m$1\033[0m\n"
+}
 
-echo "Installing git..."
+function printText {
+  echo -e "\033[0;36m$1\033[0m"
+}
+
+printTitle "========== GIT =========="
+
+printText "Installing git..."
 apt install git
 
-echo "Configuring git settings..."
+printText "Configuring git settings..."
 git config --global user.email "alexecrist@gmail.com"
 git config --global user.name "alexcrist"
 git config --global core.editor "vim"
@@ -16,77 +24,77 @@ git config --global alias.ci "commit"
 git config --global alias.st "status"
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -15"
 
-echo "========== VIM =========="
+printTitle "========== VIM =========="
 
-echo "Installing vim..."
+printText "Installing vim..."
 apt install vim
 
-echo "Copying .vimrc..."
+printText "Copying .vimrc..."
 cp .vimrc ~/.vimrc
 
-echo "Installing vundle package manager..."
+printText "Installing vundle package manager..."
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-echo "Installing vim plugins..."
+printText "Installing vim plugins..."
 vim +PluginInstall +qall
 
-echo "========== ZSH =========="
+printTitle "========== ZSH =========="
 
-echo "Installing zsh..."
+printText "Installing zsh..."
 apt install zsh
 
-echo "Setting zsh to default shell..."
+printText "Setting zsh to default shell..."
 chsh -s $(which zsh)
 
-echo "Installing oh-my-zsh package manager..."
+printText "Installing oh-my-zsh package manager..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-echo "Installing zsh-autosuggestions..."
+printText "Installing zsh-autosuggestions..."
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-echo "Installing zsh theme..."
+printText "Installing zsh theme..."
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
-echo "Installing powerline fonts..."
+printText "Installing powerline fonts..."
 apt install fonts-powerline
 
-echo "========== NVM =========="
+printTitle "========== NVM =========="
 
-echo "Installing nvm (0.33.11)..."
+printText "Installing nvm (0.33.11)..."
 git clone https://github.com/creationix/nvm.git ~/.nvm
 cd ~/.nvm
 git checkout v0.33.11
 . nvm.sh
 cd ..
 
-echo "========== ANACONDA =========="
+printTitle "========== ANACONDA =========="
 
-echo "Installing anaconda (5.2.0)..."
+printText "Installing anaconda (5.2.0)..."
 cd /tmp
 curl -O https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
 sha256sum Anaconda3-5.2.0-Linux-x86_64.sh
 bash Anaconda3-5.2.0-Linux-x86_64.sh
 
-echo "========== SPOTIFY =========="
+printTitle "========== SPOTIFY =========="
 
-echo "Installing spotify..."
+printText "Installing spotify..."
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 echo deb http://repository.spotify.com stable non-free | tee /etc/apt/sources.list.d/spotify.list
 apt update
 apt install spotify-client
 
-echo "========== CHROME =========="
+printTitle "========== CHROME =========="
 
-echo "Installing chrome..."
+printText "Installing chrome..."
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 apt udpate
 apt install google-chrome-stable
 
-echo "========== VSCODE =========="
+printTitle "========== VSCODE =========="
 
-echo "Installing vscode..."
+printText "Installing vscode..."
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
@@ -94,3 +102,4 @@ apt install apt-transport-https
 apt update
 apt install code
 
+printTitle "Finished!"
