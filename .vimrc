@@ -28,6 +28,7 @@ Plugin 'terryma/vim-multiple-cursors'           " multiple cursors
 Plugin 'bronson/vim-trailing-whitespace'        " whitespace highlighting
 Plugin 'Xuyuanp/nerdtree-git-plugin'            " git status in nerdtree
 Plugin 'ap/vim-css-color'                       " css color highlighting
+Plugin 'wlangstroth/vim-racket'                 " racket
 
 call vundle#end()
 filetype plugin indent on

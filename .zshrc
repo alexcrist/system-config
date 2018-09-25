@@ -13,11 +13,10 @@ SPACESHIP_PROMPT_ORDER=(
 plugins=(
   git
   zsh-autosuggestions
-  z
 )
 
 # Plugin manager
-export ZSH=/Users/acrist/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # Navigation shortcut
@@ -32,3 +31,10 @@ function navigate {
 alias w="navigate ~/workspace workspace"
 alias reload=". ~/.zshrc"
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Anaconda
+export PATH="/home/alexcrist/anaconda3/bin:$PATH"
