@@ -8,6 +8,25 @@ function printText {
   echo -e "\033[0;36m$1\033[0m"
 }
 
+printTitle "========== SYSTEM =========="
+
+printText "Copying rc.local..."
+cp rc.local /etc/rc.local
+
+printText "Loading keybindings..."
+dconf load /org/cinnamon/desktop/keybindings/ < dconf-keybindings.conf
+
+printText "Loading terminal profile..."
+dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ < terminal-profile.conf
+
+printText "Loading keybindings..."
+dconf load /org/gnome/terminal/legacy/keybindings/ < terminal-keybindings.conf
+
+printText "Switching [CMD] and [CTRL]..."
+cp .Xmodmap ~/.Xmodmap
+xmodmap ~/.Xmodmap
+cp Switch\ \[CMD\]\ and\ \[CTRL\].desktop ~/.config/autostart/
+
 printTitle "========== GIT =========="
 
 printText "Installing git..."
