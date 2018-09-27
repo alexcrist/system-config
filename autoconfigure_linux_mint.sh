@@ -34,6 +34,7 @@ gem install fusuma
 apt install xdotool
 mkdir -p ~/.config/fusuma
 cp fusuma-config.yml ~/.config/fusuma/config.yml
+mkdir -p ~/.config/autostart
 cp 'Multitouch gestures.desktop' ~/.config/autostart/
 
 printTitle "========== GIT =========="
@@ -78,7 +79,8 @@ printText "Installing oh-my-zsh package manager..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 printText "Installing zsh-autosuggestions..."
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+ZSH_CUSTOM=~/.oh-my-zsh/custom
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
 printText "Installing zsh theme..."
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
@@ -117,7 +119,7 @@ printTitle "========== CHROME =========="
 printText "Installing chrome..."
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-apt udpate
+apt update
 apt install google-chrome-stable
 
 printTitle "========== VSCODE =========="
