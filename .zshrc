@@ -37,10 +37,13 @@ function navigate {
   ls
 }
 
-# Aliases
+function drracket() {
+ ~/racket/bin/drracket $1 &
+}
+
+  # Aliases
 alias w="navigate ~/workspace workspace"
 alias reload=". ~/.zshrc"
-alias drracket="~/racket/bin/drracket &"
 alias racket="~/racket/bin/racket"
 
 # Anaconda
