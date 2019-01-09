@@ -62,7 +62,7 @@ let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git'
 " syntastic - enable on open
 "           - ignore css, html
 let g:syntastic_check_on_open=1
-let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": [ "css", "html" ] }
+let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": [ "css", "html", "python" ] }
 
 " vim-indent-guides - enable
 "                   - set custom colors
@@ -188,3 +188,53 @@ inoremap <Esc>Ol +
 inoremap <Esc>OS -
 inoremap <Esc>OM <Enter>
 
+" Greek Letters ---------------------------------------------------------------
+
+iabbrev alpha α
+iabbrev Alpha Α
+iabbrev beta β
+iabbrev Beta Β
+iabbrev gamma γ
+iabbrev Gamma Γ
+iabbrev delta δ
+iabbrev Delta Δ
+iabbrev epsilon ε
+iabbrev Epsilon Ε
+iabbrev zeta ζ
+iabbrev Zeta Ζ
+iabbrev eta η
+iabbrev Eta Η
+iabbrev theta θ
+iabbrev Theta Θ
+iabbrev iota ι
+iabbrev Iota Ι
+iabbrev kappa κ
+iabbrev Kappa Κ
+iabbrev lambda λ
+iabbrev Lambda Λ
+iabbrev mu μ
+iabbrev Mu Μ
+iabbrev nu ν
+iabbrev Nu Ν
+iabbrev xi ξ
+iabbrev Xi Ξ
+iabbrev omicron ο
+iabbrev Omicron Ο
+iabbrev pi π
+iabbrev Pi Π
+iabbrev rho ρ
+iabbrev Rho Ρ
+iabbrev sigma σ
+iabbrev Sigma Σ
+iabbrev tau τ
+iabbrev Tau Τ
+iabbrev upsilon υ
+iabbrev Upsilon Υ
+iabbrev phi φ
+iabbrev Phi Φ
+iabbrev chi χ
+iabbrev Chi Χ
+iabbrev psi ψ
+iabbrev Psi Ψ
+iabbrev omega ω
+iabbrev Omega Ω
