@@ -10,12 +10,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'                   " package manager
-Plugin 'airblade/vim-gitgutter'                 " git gutter
-Plugin 'ctrlpvim/ctrlp.vim'                     " fuzzy file search
-Plugin 'jiangmiao/auto-pairs'                   " bracket auto closer
-Plugin 'nathanaelkane/vim-indent-guides'        " indentation guides
 Plugin 'flazz/vim-colorschemes'                 " color scheme
-Plugin 'luochen1990/rainbow'                    " rainbow parens!
 Plugin 'scrooloose/nerdcommenter'               " easy commenting
 Plugin 'bronson/vim-trailing-whitespace'        " whitespace highlighting
 
@@ -25,30 +20,10 @@ syntax enable
 
 " Plugin Settings -------------------------------------------------------------
 
-" ctrlp.vim - set search dir
-let g:ctrlp_working_path_mode='ra'
-let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git'
-
-" vim-indent-guides - enable
-"                   - set custom colors
-let g:indent_guides_auto_colors=0
-autocmd VimEnter * IndentGuidesEnable
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=236
-
-" rainbow - enable
-"         - additonal operators
-let g:rainbow_active=1
-let g:rainbow_conf = { 'operators': '_,\|=\|+\|\*\|-\|\.\|;\||\|&\|?\|:\|<\|>\|%\|/[^/]_' }
-
-
 " nerdcommenter - add space after comment symbol
 "               - allow commenting of empty lines
 let g:NERDSpaceDelims=1
 let g:NERDCommentEmptyLines=1
-
-" vim-multiple-cursors
-let g:multi_cursor_exit_from_visual_mode=0
 
 " General Settings ------------------------------------------------------------
 
