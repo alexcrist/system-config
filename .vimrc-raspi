@@ -10,7 +10,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'                   " package manager
-Plugin 'flazz/vim-colorschemes'                 " color scheme
 Plugin 'scrooloose/nerdcommenter'               " easy commenting
 Plugin 'bronson/vim-trailing-whitespace'        " whitespace highlighting
 
@@ -56,9 +55,6 @@ set splitright                        " open splits to right
 set cursorline                        " highlight current line
 
 " Special Settings ------------------------------------------------------------
-
-" color scheme
-colorscheme Tomorrow-Night-Eighties
 
 " trim trailing whitespace on save
 autocmd BufWritePre *.py,*.js,*.css,*.html :%s/\s\+$//e
