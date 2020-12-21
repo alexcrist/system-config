@@ -95,7 +95,7 @@ let g:NERDCommentEmptyLines=1
 let g:multi_cursor_exit_from_visual_mode=0
 
 " nerdtree-git-plugin - simple symbols
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
 \ "Modified"  : "*",
 \ "Staged"    : "+",
 \ "Untracked" : "?",
@@ -137,7 +137,7 @@ set cursorline                        " highlight current line
 " Special Settings ------------------------------------------------------------
 
 " color scheme
-colorscheme hybrid_reverse
+colorscheme Tomorrow-Night-Eighties
 
 " trim trailing whitespace on save
 autocmd BufWritePre *.js,*.css,*.html :%s/\s\+$//e
