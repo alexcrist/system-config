@@ -27,7 +27,7 @@ printText "Installing vim..."
 apt install vim
 
 printText "Copying .vimrc..."
-cp .vimrc_raspi ~/.vimrc
+cp .vimrc-raspi ~/.vimrc
 
 printText "Installing vundle package manager..."
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
