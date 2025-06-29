@@ -1,5 +1,0 @@
-#!/bin/sh -e
-
-setpci -v -H1 -s 00:01.00 BRIDGE_CONTROL=0
-
-exit 0

@@ -37,21 +37,6 @@ function navigate {
   ls
 }
 
-function drracket() {
- ~/racket/bin/drracket $1 &
-}
-
-  # Aliases
+# Aliases
 alias w="navigate ~/workspace workspace"
 alias reload=". ~/.zshrc"
-alias racket="~/racket/bin/racket"
-
-# Anaconda
-export PATH="/home/alexcrist/anaconda3/bin:$PATH"
-
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-

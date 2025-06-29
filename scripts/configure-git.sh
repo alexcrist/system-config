@@ -1,16 +1,15 @@
 #!/bin/bash
 
-function printTitle {
-  echo -e "\n\033[0;34m$1\033[0m\n"
-}
+# Exit on error
+set -euo pipefail
 
-function printText {
-  echo -e "\033[0;36m$1\033[0m"
-}
+# Import helpers
+source "$(dirname "$0")/helpers.sh"
 
-printTitle "========== GIT =========="
+# Navigate to scripts dir
+cd "$(dirname "$0")"
 
-printText "Configuring git settings..."
+printTitle "Configuring git settings..."
 
 git config --global user.email "alexecrist@gmail.com"
 git config --global user.name "alexcrist"
