@@ -11,12 +11,10 @@ cd "$(dirname "$0")"
 
 print_title "Configuring vim..."
 
-print_text "Installing vim..."
-sudo apt-get update -qq
-sudo apt-get install -y vim
+print_text "Assuming vim is installed."
 
 print_text "Copying .vimrc..."
-cp .vimrc-raspi "${HOME}/.vimrc"
+cp ../configs/.vimrc-raspi "${HOME}/.vimrc"
 
 print_text "Installing vundle package manager..."
 if [[ ! -d "${HOME}/.vim/bundle/Vundle.vim" ]]; then
@@ -28,4 +26,4 @@ fi
 print_text "Installing vim plugins..."
 vim +PluginInstall +qall
 
-print_title "Finished!"
+print_title "Done!"

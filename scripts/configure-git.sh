@@ -9,7 +9,9 @@ source "$(dirname "$0")/helpers.sh"
 # Navigate to scripts dir
 cd "$(dirname "$0")"
 
-printTitle "Configuring git settings..."
+print_title "Configuring git..."
+
+print_text "Assuming git is installed."
 
 git config --global user.email "alexecrist@gmail.com"
 git config --global user.name "alexcrist"
@@ -22,4 +24,4 @@ git config --global alias.st "status"
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -15"
 git config --global init.defaultBranch main
 
-printTitle "Done!"
+print_title "Done!"
