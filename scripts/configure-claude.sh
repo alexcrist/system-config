@@ -13,6 +13,6 @@ print_title "Configuring CLAUDE..."
 
 # Symlink CLAUDE.md
 mkdir -p "${HOME}/.claude"
-ln -sf "../configs/CLAUDE.md" "${HOME}/.claude/CLAUDE.md"
+cp "../configs/CLAUDE.md" "${HOME}/.claude/CLAUDE.md"
 
 print_title "Done!"
