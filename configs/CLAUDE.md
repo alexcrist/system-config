@@ -1,31 +1,4 @@
-# Claude
-
-Hello Claude, here are the preferred ways to interact with this codebase. Thanks!
-
-## Making changes
-
-- If the prompt starts with "[pr]", "[PR]", "[Make PR]", or similar, or if the user verbally requests it, please go through the PR workflow below when making changes.
-
-- If the user does not specifically request that a PR is made, then please do not make a PR or interact with git or the GitHub CLI.
-
-## Making a PR
-
-- If you are making a PR for the requestd changes, please use the following workflow using git and GitHub CLI:
-
-  - Start with a clean, freshly pulled version of the main branch
-  - Create a new branch
-  - Make code changes
-  - Make a commit
-  - Push the commit
-  - Make a PR
-
-- The PR will then be reviewed and either merged or changes will be requested.
-
-- Please, don't ever merge a PR. Also, please, don't ever commit or push to the main branch. Thank you.
-
-- When making commits, please do not co-author them as Claude.
-
-- When creating PRs, a short description of the code changes is perfect, nothing more is needed.
+# CLAUDE.md
 
 ## General code style
 
@@ -68,6 +41,8 @@ Hello Claude, here are the preferred ways to interact with this codebase. Thanks
 - Don't modify the README.md
 
 - Format comments with a capital letter. No periods are needed unless multiple sentences are written
+
+- Do not overly-comment, err on the side of fewer comments
 
 - Use whitespace to separate logically connected sections of code
 
@@ -117,6 +92,8 @@ Hello Claude, here are the preferred ways to interact with this codebase. Thanks
 
 - Always prefer flexbox (unless a different approach has a clear advantage)
 
+- Always prefer CSS modules
+
 ## React code style
 
 - Always use functional components
@@ -126,6 +103,10 @@ Hello Claude, here are the preferred ways to interact with this codebase. Thanks
   - ComponentName/
     - ComponentName.jsx
     - ComponentName.module.css
+
+- Always prefer classes to inline styles
+
+- Never use !important
 
 ## Redux code style
 
