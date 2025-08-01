@@ -1,113 +1,69 @@
 # CLAUDE.md
 
-## General code style
+## General Guidelines
 
-- Simplicity, readability, and modularity are the most important code qualities
+- Prioritize **simplicity**, **readability**, and **modularity**
+- Less code is better than more code — avoid overengineering
+- Use comments sparingly and only when the code isn't self-explanatory
+- Follow current best practices for the language and framework
 
-- Always follow latest best practices
+### Naming
 
-- Excellent variable naming is very important
+- Use meaningful, descriptive names that reflect the true purpose of the variable — not just its usage context
+    - ✅ `artworkColor`
+    - ❌ `backgroundColor`
 
-  - For casing, use best most common practices for the coding language
-    - (i.e.: JS / TS = camelCase, python = snake_case, etc.)
-  - Variables names should convey the underlying meaning of a variable, not just how its being used in the current context
-    - (i.e.: if we extract a color from a piece of artwork, then use it as a background color in the app, it would be better to call this variable "artworkColor" rather than "backgroundColor")
-  - Use short, descriptive words for variable names. Avoid single letters and acronyms
-  - Camel case acronyms should not use all caps
-    - (i.e.: userId = good, userID = bad)
-  - For booleans, always use 'is' or 'has' prefixes (or similar) (i.e.: isBlue, hasChildren)
-    - Setters for booleans should be the name of boolean prefixed by 'set' (i.e.: setIsBlue, setHasChildren)
+- Use idiomatic casing:
+    - JavaScript/TypeScript → `camelCase`
+    - Python → `snake_case`
 
-- Prefer functional programming styles and immutability (unless doing so would make the code worse)
+- Avoid:
+    - Single-letter variables
+    - Acronyms or unnecessary abbreviations
 
-- It's better to create mutiple, modular files with distinct purposes, rather than giant monolith files
+- Acronyms in camelCase should be lowercase:
+    - ✅ `userId`
+    - ❌ `userID`
 
-- Always use feature-based file and folder organization
+- Booleans:
+    - Use prefixes like `is`, `has`, `should`, etc.
+        - ✅ `isVisible`, `hasChildren`
 
-  - i.e.:
+    - Setters should follow the pattern: `setIsVisible`, `setHasChildren`
 
-    - map/
-      - mapRendering.js
-      - mapLayers.js
-      - useMap.js
-      - Map/
-      - Map.jsx
-      - Map.module.css
+### Functional Style
 
-  - Avoid deep nesting of feature folders
+- Prefer functional programming and immutability unless it harms clarity or performance
 
-  - Feature folders should be lower-cased
+---
 
-- Don't modify the README.md
+## JavaScript / TypeScript
 
-- Format comments with a capital letter. No periods are needed unless multiple sentences are written
+- Use `const` or `let` — never `var`
+- Prefer arrow functions for all function expressions
 
-- Do not overly-comment, err on the side of fewer comments
+---
 
-- Use whitespace to separate logically connected sections of code
+## CSS
 
-  - If a block of code is unclear, add a comment above it
+- Use `px` for measurements unless there's a strong reason not to
+- Prefer `flexbox` over other layout systems unless an alternative is clearly superior
+- Avoid:
+    - `!important`
+    - `width: 100%` / `height: 100%` — use flex or constraints instead
 
-- Avoid using external dependencies when possible (unless they provide great value and are well established)
+---
 
-- Regardless of language choice, the principles from the "Zen of Python" are great guidelines:
-  - Beautiful is better than ugly
-  - Explicit is better than implicit
-  - Simple is better than complex
-  - Complex is better than complicated
-  - Flat is better than nested
-  - Sparse is better than dense
-  - Readability counts
-  - Special cases aren't special enough to break the rules
-  - Although practicality beats purity
-  - Errors should never pass silently
-  - Unless explicitly silenced
-  - In the face of ambiguity, refuse the temptation to guess
-  - There should be one, and preferably only one, obvious way to do it
-  - Now is better than never
-  - Although never is often better than right now
-  - If the implementation is hard to explain, it's a bad idea
-  - If the implementation is easy to explain, it may be a good idea
+## React
 
-## JS / TS code style
+- Use **functional components** exclusively
 
-- Prefer arrow functions
+- Component file structure:
 
-- Never use "var"
+    ```
+    ComponentName/
+        ComponentName.jsx
+        ComponentName.module.css
+    ```
 
-- Prefer the use of the latest JS / TS features (unless there are disadvantages)
-
-- Use "//" for comments. Avoid "/\* \*/"
-
-- Prefer "??" to "||" for defaulting operations
-
-- When adding permanent console statements, use console.info, console.warn, or console.error
-  - Reserve console.log for temporary debugging statements only
-
-## CSS code style
-
-- In CSS, prefer using "px" for measurements
-
-- Avoid using "width: 100%" or "height: 100%"
-
-- Always prefer flexbox (unless a different approach has a clear advantage)
-
-- Always prefer CSS modules
-
-## React code style
-
-- Always use functional components
-
-- React components files should always be structured as the following (folder with two files in it). Example:
-
-  - ComponentName/
-    - ComponentName.jsx
-    - ComponentName.module.css
-
-- Always prefer classes to inline styles
-
-- Never use !important
-
-## Redux code style
-
-- In redux slices, don't export actions (instead refer to them like: mainSlice.actions.performaAction())
+- Prefer **CSS Modules with class selectors** over inline styles
