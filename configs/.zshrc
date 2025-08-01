@@ -40,3 +40,13 @@ function navigate {
 # Aliases
 alias w="navigate ~/workspace workspace"
 alias reload=". ~/.zshrc"
+alias dc="docker compose"
+alias dcb="docker compose build"
+alias dcu="docker compose up"
+alias mirror-audio="sox --buffer 1024 -d -d"
+alias compose="docker compose"
+
+# Use cat for pager (affects DVC)
+export PAGER=cat
+
+
